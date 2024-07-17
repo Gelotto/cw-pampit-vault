@@ -33,8 +33,8 @@ pub fn init_dojoswap_pair(
     } = msg;
 
     let PairAmounts {
-        base: b_pair_amount,
         quote: q_pair_amount,
+        base: b_pair_amount,
         fee: q_fee_amount,
     } = prepare_pair_token_amounts(quote.amount, base.amount, *vl)?;
 

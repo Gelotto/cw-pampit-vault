@@ -17,8 +17,8 @@ pub fn prepare_pair_token_amounts(
     let b_reduction_amount = mul_ratio_u128(b0, PLATFORM_FEE_PCT, 1_000_000u128)?;
     let v_reduction_amount = mul_ratio_u128(v0, PLATFORM_FEE_PCT, 1_000_000u128)?;
 
+    let q = q0 - q_fee_amount;
     let b = b0 - b_reduction_amount;
-    let q = b0 - q_fee_amount;
     let v = v0 - v_reduction_amount;
 
     // Compute the final amounts to send into the new trading pair
